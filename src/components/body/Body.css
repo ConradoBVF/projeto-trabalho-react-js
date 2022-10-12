@@ -1,0 +1,26 @@
+.carrossel {
+    height: 400px;
+}
+
+.img-carousel {
+    display: flex;
+    justify-content: center;
+    background-color:  rgba(0, 0, 0, 0);
+}
+
+.css-1m9128y{
+    display: none;
+}
+
+.carousel-background>*{
+    background-color: transparent !important;
+}
+
+.titulo-produtos{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px !important;
+    text-transform: uppercase;
+}
