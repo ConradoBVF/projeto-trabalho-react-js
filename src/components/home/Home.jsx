@@ -6,11 +6,11 @@ import Footer from '../footer/Footer'
 
 const Home = () => {
     return (
-        <>  
+        <div className='container'>  
             <Header/>
             <Body/>
             <Footer/>
-        </>
+        </div>
     )
 }
 

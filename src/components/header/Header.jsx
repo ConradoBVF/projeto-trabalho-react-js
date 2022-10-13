@@ -12,9 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import './Header.css'
+import Link from '@mui/material/Link'
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = [{ name: 'Profile', href: "/" }, { name: 'Account', href: '/' }, { name: 'Logout', href: '/login' }];
+const settings = [{ name: 'Profile', href: "/" }, { name: 'Account', href: '/' }, { name: 'Logout', href: '/login' }];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,7 +37,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static" style={{background:'#17316e'}}>
+    <AppBar position="static" style={{ background: '#17316e' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img src='./img/logo.jpg' alt='logo' id='logo-principal'></img>
@@ -87,8 +88,12 @@ const Header = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                key={page.name}
+                component={Link}
+                href={page.href}
+                >
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -113,11 +118,11 @@ const Header = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
@@ -144,9 +149,14 @@ const Header = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+              {settings.map((item) => (
+                
+                <MenuItem 
+                key={item.name}
+                component={Link}
+                href={item.href}
+                >
+                  <Typography>{item.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
