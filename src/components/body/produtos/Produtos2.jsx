@@ -1,7 +1,7 @@
 import { products, categories } from './Produtos';
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import './Produtos.css';
-import { Link } from "react-router-dom";
+import Link from '@mui/material/Link'
 
 const Catalog = () => {
     return <Grid container spacing={4} sx={{
@@ -14,7 +14,9 @@ const Catalog = () => {
             Object.keys(products).map(id => {
                 return <Grid item xs={12} sm={6} md={4} lg={3} className="catalog-item">
                     <span className="badge-item">{products[id].percent}</span>
-                    <img src={products[id].images[0]} className='Produto'/>
+                    <Link href='/cadastro'>
+                        <img src={products[id].images[0]} className='Produto' alt='produto'/>
+                    </Link>
 
                     {
                         products[id].categories.map(categoryId => {
@@ -22,18 +24,18 @@ const Catalog = () => {
                         })
                     }
 
-                    <Typography variant="h5" component="h2" style={{color:"#fff"}}>{products[id].name}</Typography>
+                    <Typography variant="h5" component="h2" style={{ color: "#fff" }}>{products[id].name}</Typography>
 
                     {
-                      products[id].promo_price ? <Typography variant="p" component="p" className="promo_price" style={{color:"#fff"}}>{products[id].promo_price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</Typography> : ""
+                        products[id].promo_price ? <Typography variant="p" component="p" className="promo_price" style={{ color: "#fff" }}>{products[id].promo_price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</Typography> : ""
                     }
                     <Typography variant="p" component="p" className="price" style={{
                         fontSize: products[id].promo_price ? '16px' : '20px',
                         color: products[id].promo_price ? 'gray' : '#fff',
                         textDecoration: products[id].promo_price ? 'line-through' : 'none',
-                    }}>{products[id].price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</Typography>
+                    }}>{products[id].price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</Typography>
 
-                    <Typography variant="p" component="p" style={{color:"#fff"}}>{products[id].description.substring(0, 100)}...</Typography>
+                    <Typography variant="p" component="p" style={{ color: "#fff" }}>{products[id].description.substring(0, 100)}...</Typography>
                 </Grid>
             })
         }

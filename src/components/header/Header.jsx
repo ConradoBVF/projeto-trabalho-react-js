@@ -121,6 +121,7 @@ const Header = () => {
                 key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                href={page.href}
               >
                 {page.name}
               </Button>
