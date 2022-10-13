@@ -14,8 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import './Header.css'
 import Link from '@mui/material/Link'
 
-const pages = [{ name: 'Profile', href: "/" }, { name: 'Account', href: '/' }, { name: 'Logout', href: '/login' }];
-const settings = [{ name: 'Profile', href: "/" }, { name: 'Account', href: '/' }, { name: 'Logout', href: '/login' }];
+const pages = [{ name: 'Profile', href: "/" }, { name: 'Account', href: '/' }, { name: 'Logout', href: '/cadastro' }];
+const settings = [{ name: 'Profile', href: "/" }, { name: 'Account', href: '/' }, { name: 'Logout', href: '/cadastro' }];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

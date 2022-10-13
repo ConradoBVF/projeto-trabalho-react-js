@@ -1,7 +1,7 @@
-import SignUp from './signup/SignUp'
+import SignIn from './signin/SignIn'
 
 const Login = () => {
-    return <SignUp/>
+    return <SignIn/>
 }
 
 export default Login
