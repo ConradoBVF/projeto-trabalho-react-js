@@ -24,3 +24,14 @@
     margin-top: 20px !important;
     text-transform: uppercase;
 }
+
+
+@media screen and (max-width: 859px){
+    .carousel-background>*, .carousel-background *{
+        display: none !important;
+        height: 0 !important;
+    }
+    .css-1f8sh1y{
+        display: none;
+    }
+}
