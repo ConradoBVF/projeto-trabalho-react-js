@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const Cadastro = lazy(() => import("./components/cadastro/Cadastro"))
 const Login = lazy(() => import("./components/login/Login"))
+const PaginaProduto = lazy(() => import("./components/pagina-produto/PaginaProduto"))
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/pagina-produto/:id" element={<PaginaProduto />} />
       </Routes>
     </Router>
   );

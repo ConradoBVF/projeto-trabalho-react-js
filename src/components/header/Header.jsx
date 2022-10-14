@@ -13,9 +13,10 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import './Header.css'
 import Link from '@mui/material/Link'
+import Logo from '../img/logo.jpg'
 
-const pages = [{ name: 'Profile', href: "/" }, { name: 'Account', href: '/' }, { name: 'Logout', href: '/cadastro' }];
-const settings = [{ name: 'Profile', href: "/" }, { name: 'Account', href: '/' }, { name: 'Logout', href: '/cadastro' }];
+const pages = [{ name: 'Produtos', href: "/" }, { name: 'Minhas Compras', href: '/' }, { name: 'Logout', href: '/cadastro' }];
+const settings = [{ name: 'Produtos', href: "/" }, { name: 'Minhas Compras', href: '/' }, { name: 'Logout', href: '/cadastro' }];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,7 +41,7 @@ const Header = () => {
     <AppBar position="static" style={{ background: '#17316e' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src='./img/logo.jpg' alt='logo' id='logo-principal'></img>
+          <img src={Logo} alt='logo' id='logo-principal'></img>
           <Typography
             variant="h6"
             noWrap
