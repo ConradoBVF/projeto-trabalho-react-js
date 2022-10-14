@@ -1,0 +1,49 @@
+html{
+    color: rgb(2, 2, 142);
+}
+
+.img-produto{
+    width: 75%;
+}
+
+.caixa-produto{
+    background-color: lightgray;
+    width: 100%;
+    text-align: left;
+}
+
+.texto-produto{
+    padding: 25px;
+}
+
+.texto-produto *{
+    margin-bottom: 30px !important;
+}
+
+.botao{
+    display: flex;
+    flex-direction: column;
+}
+
+#productItem__quantity *{
+    margin: 0 !important;
+}
+
+#productItem__quantity{
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    display: block;
+}
+
+#productItem__quantity input::-webkit-outer-spin-button,
+#productItem__quantity input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0 !important;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+#productItem__quantity input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}

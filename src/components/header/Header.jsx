@@ -41,7 +41,9 @@ const Header = () => {
     <AppBar position="static" style={{ background: '#17316e' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={Logo} alt='logo' id='logo-principal'></img>
+          <Link href='/'>
+            <img src={Logo} alt='logo' id='logo-principal'></img>
+          </Link>
           <Typography
             variant="h6"
             noWrap
@@ -90,9 +92,9 @@ const Header = () => {
             >
               {pages.map((page) => (
                 <MenuItem
-                key={page.name}
-                component={Link}
-                href={page.href}
+                  key={page.name}
+                  component={Link}
+                  href={page.href}
                 >
                   <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
@@ -152,11 +154,11 @@ const Header = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((item) => (
-                
-                <MenuItem 
-                key={item.name}
-                component={Link}
-                href={item.href}
+
+                <MenuItem
+                  key={item.name}
+                  component={Link}
+                  href={item.href}
                 >
                   <Typography>{item.name}</Typography>
                 </MenuItem>
