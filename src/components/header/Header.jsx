@@ -15,8 +15,8 @@ import './Header.css'
 import Link from '@mui/material/Link'
 import Logo from '../img/logo.jpg'
 
-const pages = [{ name: 'Produtos', href: "/" }, { name: 'Minhas Compras', href: '/' }, { name: 'Logout', href: '/cadastro' }];
-const settings = [{ name: 'Produtos', href: "/" }, { name: 'Minhas Compras', href: '/' }, { name: 'Logout', href: '/cadastro' }];
+const pages = [{ name: 'Produtos', href: "/" }, { name: 'Minhas Compras', href: '/carrinho' }, { name: 'Logout', href: '/cadastro' }];
+const settings = [{ name: 'Produtos', href: "/" }, { name: 'Minhas Compras', href: '/carrinho' }, { name: 'Logout', href: '/cadastro' }];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
