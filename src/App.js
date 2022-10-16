@@ -8,6 +8,7 @@ const Login = lazy(() => import("./components/login/Login"))
 const PaginaProduto = lazy(() => import("./components/pagina-produto/PaginaProduto"))
 const Checkout = lazy(() => import("./components/checkout/Checkout"))
 const Carrinho = lazy(() => import("./components/cart/Cart"))
+const NotFound = lazy(() => import("./components/not-found/NotFound"))
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/pagina-produto/:id" element={<PaginaProduto />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/carrinho" element={<Carrinho />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
