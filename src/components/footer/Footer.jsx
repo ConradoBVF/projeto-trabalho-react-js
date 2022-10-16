@@ -15,17 +15,17 @@ const Footer = () => {
                         <Grid item xs={12} sm={4}>
                             <Box borderBottom={1}>Help</Box>
                             <Box>
-                                <Link href="/" color="inherit">
+                                <Link href="/pagina-nao-encontrada" color="inherit">
                                     Contact
                                 </Link>
                             </Box>
                             <Box>
-                                <Link href="/" color="inherit">
+                                <Link href="/pagina-nao-encontrada" color="inherit">
                                     Support
                                 </Link>
                             </Box>
                             <Box>
-                                <Link href="/" color="inherit">
+                                <Link href="/pagina-nao-encontrada" color="inherit">
                                     Privacy
                                 </Link>
                             </Box>
@@ -46,17 +46,17 @@ const Footer = () => {
                         <Grid item xs={12} sm={4}>
                             <Box borderBottom={1}>Messages</Box>
                             <Box>
-                                <Link href="/" color="inherit">
+                                <Link href="/pagina-nao-encontrada" color="inherit">
                                     Backup
                                 </Link>
                             </Box>
                             <Box>
-                                <Link href="/" color="inherit">
+                                <Link href="/pagina-nao-encontrada" color="inherit">
                                     History
                                 </Link>
                             </Box>
                             <Box>
-                                <Link href="/" color="inherit">
+                                <Link href="/pagina-nao-encontrada" color="inherit">
                                     Roll
                                 </Link>
                             </Box>
