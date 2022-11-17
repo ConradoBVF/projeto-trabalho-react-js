@@ -29,6 +29,14 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export default function SignUp() {
+  const [form, setForm] = React.useState({});
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setForm({
+      ...form,
+      [name]:value
+    })
+  }
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -61,6 +69,7 @@ export default function SignUp() {
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
+                    onChange={(event) => handleChange(event)}
                     autoComplete="given-name"
                     name="firstName"
                     required
@@ -70,7 +79,7 @@ export default function SignUp() {
                     autoFocus
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                  <Grid item xs={12} sm={6}>
                   <TextField
                     required
                     fullWidth
@@ -128,6 +137,8 @@ export default function SignUp() {
           <Copyright sx={{ mt: 5 }} />
         </Container>
       </ThemeProvider>
+      <pre>{JSON.stringify(form, null, 2)}</pre>
+      <h1>teste</h1>
     </div>
   );
 }
